@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\SmsOutbound.Core\SmsOutbound.Core.csproj" />
+  </ItemGroup>
+
+</Project>

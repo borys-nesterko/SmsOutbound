@@ -1,0 +1,6 @@
+@SmsOutbound_HostAddress = http://localhost:5069
+
+GET {{SmsOutbound_HostAddress}}/api/v1/messages
+Accept: application/json
+
+###
