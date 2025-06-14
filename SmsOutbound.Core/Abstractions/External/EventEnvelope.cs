@@ -15,10 +15,10 @@ public class EventEnvelope
 	public DateTime CreatedAt { get; init; }
 
 	[JsonPropertyName("eventType")]
-	public string EventType { get; init; }
+	public required string EventType { get; init; }
 
 	[JsonPropertyName("content")]
-	public string Content { get; init; }
+	public required string Content { get; init; }
 
 	// Generic version with specifying an exact IEvent object to deserialize should be provided.
 	public object Unwrap()

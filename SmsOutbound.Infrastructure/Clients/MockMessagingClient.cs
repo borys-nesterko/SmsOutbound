@@ -32,12 +32,12 @@ public class MockMessagingClient(
 
 		if (DateTime.UtcNow.Second % 5 == 0)
 		{
-			return Task.FromResult(new BaseResponse());
+			var errorMessage = "Failed to send SMS due to an error from the provider";
+			return Task.FromResult(new BaseResponse(System.Net.HttpStatusCode.InternalServerError, errorMessage));
 		}
 		else
 		{
-			var errorMessage = "Failed to send SMS due to an error from the provider";
-			return Task.FromResult(new BaseResponse(System.Net.HttpStatusCode.InternalServerError, errorMessage));
+			return Task.FromResult(new BaseResponse());
 		}
 	}
 }

@@ -67,7 +67,7 @@ public static class ServiceCollectionExtensions
 		// Register repositories
 		// In real world applications, this would be a key-value store - Redis, DynamoDB, Mongo etc. 
 		// or a SQL database, like PostgreSQL if we need to implement kind of poisoned queue with an outbox pattern
-		services.AddScoped<IMessageLogRepository, MessageLogInMemoryRepository>(); 
+		services.AddSingleton<IMessageLogRepository, MessageLogInMemoryRepository>(); 
 
 		return services;
 	}
